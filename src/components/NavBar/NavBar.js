@@ -7,8 +7,8 @@ const NavBar = () => {
             <a href="/" className={clsx(styles.icon, styles.link)}><i class="fa fa-tasks"></i></a>
             <ul className={styles.list}>
                 <li><a href="/" className={styles.link}>Home</a></li>
-                <li><a href="/" className={styles.link}>Favorite</a></li>
-                <li><a href="/" className={styles.link}>About</a></li>
+                <li><a href="/favorite" className={styles.link}>Favorite</a></li>
+                <li><a href="/about" className={styles.link}>About</a></li>
             </ul>
         </div>
     );
