@@ -1,0 +1,27 @@
+@import "../../styles/settings.scss";
+
+.navigation {
+    background: darken($color-dark, 3%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 70px;
+}
+
+.link {
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+
+    &.icon {
+        font-size: 24px;
+        padding-left: 70px;
+    }
+}
