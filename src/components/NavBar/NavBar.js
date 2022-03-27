@@ -1,14 +1,30 @@
 import styles from './NavBar.module.scss'
 import clsx from 'clsx';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
         <div className={styles.navigation}>
-            <a href="/" className={clsx(styles.icon, styles.link)}><i class="fa fa-tasks"></i></a>
-            <ul className={styles.list}>
-                <li><a href="/" className={styles.link}>Home</a></li>
-                <li><a href="/favorite" className={styles.link}>Favorite</a></li>
-                <li><a href="/about" className={styles.link}>About</a></li>
+            <Link to="/" className={clsx(styles.icon)}><i class="fa fa-tasks"></i></Link>
+            <ul className={clsx(styles.list, styles.link)}>
+                <li>
+                    <NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                        to="/">
+                        Home
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                        to="/favorite">
+                        Favorite
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                        to="/about">
+                        About
+                    </NavLink>
+                </li>
             </ul>
         </div>
     );

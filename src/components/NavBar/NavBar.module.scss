@@ -12,16 +12,22 @@
     flex-direction: row;
     justify-content: flex-end;
     padding-right: 70px;
+
+    &.link a {
+        padding: 10px;
+        text-decoration: none;
+        color: $color-light;
+        font-size: 17px;
+
+        &.linkActive {
+            color: $color-warning;
+        }
+    }
 }
 
-.link {
-    font-size: 17px;
-    color: white;
-    text-decoration: none;
+.icon {
+    font-size: 24px;
     padding: 10px;
-
-    &.icon {
-        font-size: 24px;
-        padding-left: 70px;
-    }
+    padding-left: 70px;
+    color: $color-light;
 }
