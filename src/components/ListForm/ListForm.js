@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 import { useDispatch } from "react-redux";
 import { useState } from 'react';
-import { addList } from '../../redux/store';
+import { addList } from '../../redux/listsRedux';
 
 const ListForm = () => {
     const [title, setTitle] = useState('');
