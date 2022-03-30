@@ -11,6 +11,7 @@ export const getListById = ({ lists }, listId) => lists.find(list => list.id ===
 export const getColumnsByList = ({ columns }, listId) => columns.filter(column => column.listId === listId)
 export const getAllLists = state => state.lists;
 export const getSearchPhrase = state => state.searchPhrase;
+export const getFavoriteCards = ({cards}) => cards.filter(card => card.isFavorite === true);
 
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
