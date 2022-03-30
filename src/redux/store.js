@@ -6,14 +6,14 @@ import strContain from '../utils/strContains';
 //selectors
 export const getFilteredCards = ({ cards, searchPhrase }, columnId) => cards
     .filter(card => card.columnId === columnId && strContain(card.title, searchPhrase));
-
 export const getAllColumns = state => state.columns;
+export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
+export const getColumnsByList = ({ columns }, listId) => columns.filter(column => column.listId === listId)
+export const getAllLists = state => state.lists;
 
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
-
-export const addCard = payload => ({ type: 'ADD_CARD', payload });
-
+export const addCard = payload => ({ type: 'ADD_CARD', payload })
 export const toUpdateSearchPhrase = payload => ({ type: 'UPDATE_SEARCHPHRASE', payload });
 
 const reducer = (state, action) => {
