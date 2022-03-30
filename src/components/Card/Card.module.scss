@@ -16,8 +16,13 @@ button {
     border: none;
     cursor: pointer;
     background-color: transparent;
+    color: grey;
 
     &.active {
         color: $color-warning;
     }
+}
+
+button:hover {
+    color: black;
 }
